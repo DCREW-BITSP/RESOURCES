@@ -1,1 +1,4 @@
-DFIR2.zip contains gotreut.jpeg. Run binwalk to extract E004.zip from gotreut.jpeg. E004.zip is password protected so run exiftool on gotreut.jpeg to read metadata and get Base64 encoded password which gives flag1.txt. Use the hint in flag1.txt as passphrase for steghide on gotreut.jpeg which gives flag.txt. flag.txt has the flag brainfuck encoded.
+## Pixlate It ##
+_DFIR2.zip_ contains _gotreut.jpeg_. Run ```binwalk -e gotreut.jpeg``` to extract _E004.zip_ from _gotreut.jpeg_. _E004.zip_ is password protected so run ```exiftool gotreut.jpeg``` to read metadata and get Base64 encoded password which gives _flag1.txt_. Use the hint in _flag1.txt_ as passphrase for ```steghide extract -sf gotreut.jpeg``` which gives _flag.txt_. _flag.txt_ has the flag brainfuck encoded.
+
+Flag: KPMG{CTfs_4r3_Fun}
