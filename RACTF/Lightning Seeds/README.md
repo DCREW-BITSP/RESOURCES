@@ -1,3 +1,5 @@
+## Lightning Seeds
+
 Looking through encrypt.py we see 
 ```python
 encrypted = ''.join(f'{(ord(c) ^ random.randint(0,255)):02x}' for c in flag)
