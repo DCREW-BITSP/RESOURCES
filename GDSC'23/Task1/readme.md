@@ -2,7 +2,7 @@
 
 ---
 
-Complete the bandit room of `Overthewire`
+Complete the bandit room of [Overthewire](https://overthewire.org/wargames/bandit/)
 
 You can watch walkthroughs and writeups but try to do it on your own first to get some experience.
 
