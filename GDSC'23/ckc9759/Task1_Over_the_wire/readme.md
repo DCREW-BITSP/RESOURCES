@@ -2,3 +2,4 @@
 
 ---
 
+We will start with `Bandit` wargame room.
