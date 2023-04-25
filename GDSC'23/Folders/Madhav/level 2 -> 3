@@ -1,0 +1,6 @@
+you can deal with this level in mutltiple ways.
+for eg. if the name of the file is spaces in filename, both 
+wrapping the filename in quotes like this: cat "spaces in filename"
+and
+using \ to escape every space: cat spaces\ in\ filename
+would work.
