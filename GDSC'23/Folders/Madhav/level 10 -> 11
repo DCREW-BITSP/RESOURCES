@@ -1,0 +1,5 @@
+the command I used was:
+base64 -d data.txt
+where 
+base64: The base64 command is used to encode and decode data in Base64 format.
+-d: The -d option in base64 specifies the decoding operation.
