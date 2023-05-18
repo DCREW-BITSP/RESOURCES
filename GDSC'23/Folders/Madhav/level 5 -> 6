@@ -1,0 +1,11 @@
+cd into the inhere directory
+I used find command to get the answer, though the first time I did this level I think I did it using ls too.
+anyways, the command I used this time was:
+find . -type f -readable ! -executable -size 1033c
+where
+The find command is used to search for files and directories.
+The dot (.) represents the current directory, so the search will be performed in the current directory and its subdirectories.
+-type f specifies that only regular files should be considered.
+-readable ensures that the file is human-readable.
+! -executable excludes executable files from the search.
+-size 1033c specifies the size of the file should be 1033 bytes.
