@@ -1,0 +1,11 @@
+the command I used was:
+cat data.txt | sort | uniq -c -u
+where
+cat: The cat command is used to concatenate and display the contents of a file. In this case, it is used to read the contents of the file data.txt.
+data.txt: The filename data.txt represents the file from which we want to process the data.
+|: The pipe symbol is used to redirect the output of the cat command as input to the sort command.
+sort: The sort command is used to sort lines of text in alphabetical order.
+|: Another pipe symbol is used to redirect the output of the sort command as input to the uniq command.
+uniq: The uniq command is used to filter adjacent duplicate lines of text and display unique lines.
+-c: The -c option in uniq is used to count the number of occurrences of each unique line.
+-u: The -u option in uniq is used to display only the lines that occur exactly once.
