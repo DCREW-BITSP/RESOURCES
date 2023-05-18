@@ -1,0 +1,8 @@
+the command I used was:
+strings data.txt | grep -e '=' 
+where 
+strings: The strings command is used to extract printable strings from files. It scans a given file and prints sequences of characters that are likely to be human-readable text.
+data.txt: The filename data.txt represents the file from which we want to extract strings and search for lines containing '='.
+|: The pipe symbol is used to redirect the output of the strings command as input to the grep command.
+grep: The grep command is used for searching text patterns within files or input streams.
+-e '=': The -e option in grep is used to specify the pattern to search for. In this case, the pattern is the character '='
