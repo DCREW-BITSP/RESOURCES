@@ -1,0 +1,8 @@
+the command I used for this level was:
+cat data.txt | grep -e 'millionth'
+where
+cat: The cat command is used to concatenate and display the contents of a file. In this case, it is used to read the contents of the file data.txt.
+data.txt: The filename data.txt represents the file in which we want to search for the word "millionth".
+|: The pipe symbol is used to redirect the output of the cat command as input to the grep command.
+grep: The grep command is used for searching text patterns within files or input streams.
+-e 'millionth': The -e option in grep is used to specify the pattern to search for. In this case, the pattern is the word "millionth"
