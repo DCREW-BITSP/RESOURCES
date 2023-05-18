@@ -1,0 +1,11 @@
+I used this command for getting the answer:
+find / -type f -user bandit7 -group bandit6 -readable -size 33c 2>/dev/null
+where:
+find: This command is used to search for files and directories recursively.
+/: Specifies the starting directory for the search. In this case, it's the root directory.
+-type f: Filters the search to include only regular files.
+-user bandit7: Matches files owned by the user "bandit7".
+-group bandit6: Matches files that belong to the group "bandit6".
+-readable: Filters the search to include only files that are readable by the current user.
+-size 33c: Matches files with a size of 33 bytes.
+2>/dev/null: Redirects the error output (2) to the null device (/dev/null), effectively discarding any error messages such as "Permission denied."
