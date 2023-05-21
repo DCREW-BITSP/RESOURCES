@@ -3,6 +3,7 @@ Create a temporary directory under /tmp to work with. For example: mkdir /tmp/my
 Copy the "data.txt" file to the temporary directory: cp data.txt /tmp/myname123/.
 
 Navigate to the temporary directory: cd /tmp/myname123.
+first decompress the hexdump using xxd -r data.txt
 
 Determine the appropriate file extension for the compressed file. Use the file command to get information about the file type: file data.txt.
 
