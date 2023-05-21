@@ -1,0 +1,21 @@
+Create a temporary directory under /tmp to work with. For example: mkdir /tmp/myname123.
+
+Copy the "data.txt" file to the temporary directory: cp data.txt /tmp/myname123/.
+
+Navigate to the temporary directory: cd /tmp/myname123.
+
+Determine the appropriate file extension for the compressed file. Use the file command to get information about the file type: file data.txt.
+
+The output will provide insights into the compression format, such as gzip or bzip2.
+Rename the "data.txt" file to its original compressed file name. Replace <filename> with the appropriate name.
+
+Example: mv data.txt <filename>
+If the file is compressed with gzip, use the gzip -d command to decompress it: gzip -d <filename>.
+
+Repeat this step as necessary if there are multiple compression layers.
+If the file is compressed with bzip2, use the bzip2 -d command to decompress it: bzip2 -d <filename>.
+
+Repeat this step as necessary if there are multiple compression layers.
+Continue decompressing the file until you reach the uncompressed file.
+
+Once you have the uncompressed file, use the cat command to view its contents: cat <filename>.
