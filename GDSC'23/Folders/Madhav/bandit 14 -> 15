@@ -1,0 +1,11 @@
+use the telnet command to connect to the localhost on the specified port. Replace <port> with the actual port number mentioned in the "README" file.
+
+Example: telnet localhost <port>
+After connecting, you should see a blank terminal waiting for input.
+
+Type the password for the current level and press Enter.
+
+Note: You won't see the password being typed or any visual feedback.
+Wait for a few moments for the server to process the request.
+
+If the password is correct, you should receive a response containing the password for the next level.
