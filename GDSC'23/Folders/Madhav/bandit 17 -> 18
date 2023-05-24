@@ -1,0 +1,5 @@
+Use the diff command to compare the contents of the two files and display the differences: diff passwords.old passwords.new.
+
+The diff command will output the lines that are different between the two files. 
+Look for lines prefixed with < or >. 
+The lines prefixed with < indicate lines present in passwords.old but not in passwords.new, while the lines prefixed with > indicate lines present in passwords.new but not in passwords.old.
