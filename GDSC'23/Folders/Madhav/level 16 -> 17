@@ -1,0 +1,35 @@
+
+first use:
+nmap -p 31000-32000 localhost
+The command nmap -p 31000-32000 localhost is used to perform a port scan on the localhost (your own machine) for a range of ports. 
+Let's break down the command and its components:
+
+nmap: This is the command to invoke Nmap (Network Mapper), a powerful network scanning and exploration tool.
+
+-p 31000-32000: This option specifies the range of ports to scan. In this case, it scans ports from 31000 to 32000.
+This range includes all ports between these numbers.
+
+localhost: This argument specifies the target to scan. In this case, it is set to localhost, referring to the local machine itself.
+
+By running this command, you are instructing Nmap to scan the range of ports from 31000 to 32000 on the localhost.
+Nmap will send probe requests to each port within the specified range to determine if they are open, closed, or filtered.
+
+Nmap will then provide a report that lists the status of each scanned port. 
+Open ports may indicate services or applications running on those ports, which can be potential points of interaction or vulnerabilities.
+
+then check all ports using 
+openssl s_client -host localhost -port <port>
+
+you will get a RSA private key if you submit the current password to the correct port.
+make a directory in /tmp/ using 
+mkdir /tmp/<dir_name>/
+
+then make a file and start writing into it using
+cat > /tmp/<dir_name>/<file_name>
+paste the RSA private key
+
+change the permissions using
+chmod 600 /tmp/<dir_name>/<file_name>
+
+then log in to the next level using
+ssh -i /tmp/<dir_name>/<file_name> bandit17@localhost -p 2220
