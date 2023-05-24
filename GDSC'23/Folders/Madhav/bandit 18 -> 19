@@ -1,0 +1,13 @@
+The command ssh bandit18@bandit.labs.overthewire.org -p 2220 "cat ~/readme" is used to establish an SSH connection to the Bandit server and execute a command remotely. Let's break down the command and its components:
+
+ssh: This is the command to initiate an SSH connection.
+
+bandit18@bandit.labs.overthewire.org: This specifies the username and hostname of the server you want to connect to. In this case, it's connecting to the Bandit server.
+
+-p 2220: This option specifies the SSH port number to use. The default SSH port is 22, but for the Bandit server, the port number is 2220.
+
+"cat ~/readme": This is the command that will be executed remotely after establishing the SSH connection. It instructs the remote server to read the contents of the readme file in the user's home directory.
+
+By running this command, you are instructing the local machine to establish an SSH connection to the Bandit server using the provided username and hostname on the specified port. Once the connection is established, the command "cat ~/readme" is sent to the remote server.
+
+The remote server, upon receiving the command, executes it and outputs the contents of the readme file. The output will be displayed on your local machine's terminal.
