@@ -1,0 +1,4 @@
+Execute the bandit20-do command with the argument cat /etc/bandit_pass/bandit20 to read the password for the next level: ./bandit20-do cat /etc/bandit_pass/bandit20.
+
+The ./ before the command is necessary to run the executable file in the current directory.
+The command will execute the cat /etc/bandit_pass/bandit20 command as the bandit20-do executable, which has the necessary permissions to access the password file.
