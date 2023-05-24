@@ -1,0 +1,15 @@
+use this command:
+openssl s_client -host localhost -port 30001
+where:
+openssl: This is the command to invoke the OpenSSL toolkit, which provides a wide range of cryptographic functions, including secure network connections.
+
+s_client: This is a subcommand of OpenSSL that acts as an SSL/TLS client. It allows you to establish an encrypted connection to a server.
+
+-host localhost: This option specifies the host to connect to. In this case, it is set to localhost, which refers to the local machine itself.
+
+-port 30001: This option specifies the port number to connect to. 
+
+By running this command, you are instructing OpenSSL to establish an SSL/TLS connection to the specified host (localhost) on the specified port (30001). 
+This is typically done to communicate securely with a server that requires encryption, such as when submitting passwords or sensitive information.
+
+Once the connection is established, you can interact with the server through the terminal.
