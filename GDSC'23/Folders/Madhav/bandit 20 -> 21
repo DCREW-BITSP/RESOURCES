@@ -1,0 +1,48 @@
+In Level 20 to Level 21 of the Bandit game, there is a setuid binary named suconnect in the home directory. The suconnect binary performs the following actions:
+
+The binary takes a command line argument, which specifies the port number of a network connection to localhost (127.0.0.1).
+
+It establishes a connection to the localhost on the specified port.
+
+Once the connection is established, the suconnect binary reads a line of text from the connection.
+
+The binary compares the received text with the password for the previous level, which is bandit20.
+
+If the received text matches the password (bandit20), the binary transmits the password for the next level (bandit21) through the network connection.
+
+The purpose of this binary is to test whether you can correctly establish a network connection and transmit the correct password to progress to the next level. To ensure it works as intended, you can set up your own network daemon to simulate the behavior.
+
+To test the binary and see if it works as expected, you can follow these steps:
+
+Set up a network listener (daemon) on your own machine, listening on a specific port (e.g., port 1234). You can use tools like netcat or nc to accomplish this.
+
+Run the suconnect binary and provide the port number of your network listener as a command-line argument:
+
+bash
+Copy code
+./suconnect [port_number]
+Replace [port_number] with the port number you specified when setting up the network listener (e.g., 1234).
+
+The suconnect binary will establish a connection to your network listener.
+
+Once the connection is established, enter the password for the previous level (bandit20) when prompted by the network listener.
+
+If the password matches, the suconnect binary will transmit the password for the next level (bandit21) to your network listener.
+
+By setting up and testing your own network listener, you can confirm the behavior of the suconnect binary and ensure that it correctly compares passwords and transmits the correct password for the next level.
+
+In the context of Level 20 to Level 21 of the Bandit game, the command echo -n "VxCazJaVykI6W36BkBU0mJTCM8rR95XT" | nc -l -p 2656 & is used to exploit a vulnerable service and capture the password for the next level.
+
+Here's how the command works:
+
+echo -n "VxCazJaVykI6W36BkBU0mJTCM8rR95XT": The echo command is used to print the provided string, "VxCazJaVykI6W36BkBU0mJTCM8rR95XT", to the standard output. The -n option prevents the trailing newline character from being included in the output.
+
+| (Pipe): The pipe symbol connects the output of the echo command to the input of the next command.
+
+nc -l -p 2656: The nc command, also known as netcat, is a utility for network communication. In this case, it is used to listen for incoming connections on port 2656. The -l option specifies that nc should listen for incoming connections, and the -p option specifies the port number.
+
+&: The ampersand symbol at the end of the command runs the entire command in the background, allowing you to continue using the terminal without waiting for it to finish.
+
+By executing this command, you set up a listener on port 2656 that waits for an incoming connection. When the suconnect binary is run on the Bandit server, it will establish a connection to your listener and send the password for Level 21 (VxCazJaVykI6W36BkBU0mJTCM8rR95XT). The password will then be displayed in the terminal where you ran the nc command.
+
+This approach allows you to capture the password without needing to directly interact with the vulnerable service.
