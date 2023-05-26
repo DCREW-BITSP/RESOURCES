@@ -1,0 +1,8 @@
+first cd into /etc/cron.d/
+check the contents of the cronjobs
+you will realise that they all run scripts located in /usr/bin/
+cd into /usr/bin/
+since we need to login into level 22, we most probably need to figure out what cronjob_bandit22.sh is doing.
+look at the contents of the script. 
+you will see that it writes the password into a file in /tmp/
+look at contents of that file, you will find the password for the next level.
