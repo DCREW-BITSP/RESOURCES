@@ -1,0 +1,18 @@
+just like last couple of levels, look at the contents of cronjob_bandit24.sh
+you'll see that it is a script run as user bandit24 which executes all scripts in /var/spool/bandit24/foo/ made by bandit23 and deletes them after 60 seconds.
+so make a script that writes the password from /etc/bandit_pass/bandit24 into a file.
+first make a directory in /tmp/
+then make a shell script which look like this:
+#!/bin/bash
+cat /etc/bandit_pass/bandit24 > /tmp/<directory>/<password_file>
+
+change the script's permissions to give everyone full control over the file using 
+chmod 777 <script.sh>
+
+now make a file to store the password with the same name as that in the script using
+touch <password_file>
+
+and give read and write persmissions to everyone using
+chmod 666 <password_file>
+
+now copy the script to /var/spool/bandit24/foo/ and check <password_file> after some time, you'll have the password.
