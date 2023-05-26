@@ -1,0 +1,20 @@
+you just learnt to make shell scripts in the last level. you need to make another one for this level.
+you need to brute force 10000 combinations of password and a unkown pin which is somwehere between 0001 and 9999.
+easy!
+just make a shell script which looks like this:
+#!/bin/bash
+for pin in {0001..9999}
+	do
+		echo "VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar" $pin
+done
+
+make it executable using
+chmod +x <script.sh>
+
+now pipe the output of this script to <output.txt> using
+./<script.sh> | cat > output.txt
+
+now connect to port 30002 and pipe the contents of <output.txt>
+cat output.txt | nc localhost 30002 
+
+you'll get the password for the next level.
