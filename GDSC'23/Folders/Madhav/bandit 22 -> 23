@@ -1,0 +1,11 @@
+like last level, look at the contents of cronjob_bandit23.sh
+since the script is being executed as bandit23, $myname = bandit23
+If $myname is equal to bandit23, then the value of mytarget would be the MD5 hash of the string "I am user bandit23". 
+Here's the breakdown of the command:
+$myname is set to bandit23.
+The string "I am user bandit23" is passed to the echo command.
+The output of echo is piped (|) to the md5sum command.
+The md5sum command calculates the MD5 hash of the input string.
+The output of md5sum is piped (|) to the cut command.
+The cut command uses a space delimiter (-d ' ') to separate the output into fields, and -f 1 specifies to retrieve the first field.
+Finally, the value of the first field (the MD5 hash) is assigned to the variable mytarget.
